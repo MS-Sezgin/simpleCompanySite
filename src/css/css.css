@@ -1,0 +1,72 @@
+.container {
+  margin: 0 auto;
+  display: grid;
+  grid-template-rows: 200px 50px 1fr 40px;
+  grid-row-gap: 0px;
+  grid-column-gap: 20px;
+  height: 90vh;
+  width: 110%;
+  grid-template-areas:
+    "header "
+    "nav "
+    "main "
+    "footer";
+}
+.header {
+  grid-area: header;
+}
+.header img {
+  object-fit: cover;
+  height: 200px;
+}
+.nav {
+  background-color: mistyrose;
+  align-items: center;
+  font-size: 20px;
+  border: 1px solid black;
+  column-gap: 10px;
+  padding-left: 10px;
+  grid-area: nav;
+}
+.mainHome {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 60px;
+  padding-top: 20px;
+  grid-area: main;
+}
+.mainCandidate {
+  padding-top: 20px;
+  grid-area: main;
+}
+.mainAbout {
+  display: grid;
+  padding-top: 20px;
+  grid-area: main;
+}
+.App {
+  background-image: url(https://i.pinimg.com/originals/e3/b3/1c/e3b31cc177fded00a6b9ee591ca519f2.jpg);
+  background-size: cover;
+  height: 1000px;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.gridTable {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border: 0, 5px solid black;
+  grid-template-areas:
+    "search search search "
+    "data data data ";
+  grid-template-columns: 1fr 1fr 66px;
+}
+.gridTable > span {
+  border: 1px solid black;
+  padding: 8px 4px;
+}
+.inputText {
+  display: flex;
+  justify-content: flex-end;
+  grid-area: search;
+}
